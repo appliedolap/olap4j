@@ -70,15 +70,15 @@
 
   <issueManagement />
 
-  <distributionManagement>
-    <repository>
-      <uniqueVersion>false</uniqueVersion>
-      <id>pentaho</id>
-      <name>Pentaho Open Repository</name>
-      <url>http://repository.pentaho.org/artifactory/pentaho</url>
-      <layout>default</layout>
-    </repository>
-  </distributionManagement>
+<!--  <distributionManagement>-->
+<!--    <repository>-->
+<!--      <uniqueVersion>false</uniqueVersion>-->
+<!--      <id>pentaho</id>-->
+<!--      <name>Pentaho Open Repository</name>-->
+<!--      <url>http://repository.pentaho.org/artifactory/pentaho</url>-->
+<!--      <layout>default</layout>-->
+<!--    </repository>-->
+<!--  </distributionManagement>-->
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -105,9 +105,9 @@
     <mondrian-data-foodmart.version>0.9-SNAPSHOT</mondrian-data-foodmart.version>
     <mondrian.version>4.3.0.1-130</mondrian.version>
     <mysql-connector-java.version>5.1.38</mysql-connector-java.version>
-    <rt-java5.version>1.5.0_22</rt-java5.version>
-    <rt-java6.version>1.6.0_24</rt-java6.version>
-    <rt-java7.version>1.7.0_15</rt-java7.version>
+<!--    <rt-java5.version>1.5.0_22</rt-java5.version>-->
+<!--    <rt-java6.version>1.6.0_24</rt-java6.version>-->
+<!--    <rt-java7.version>1.7.0_15</rt-java7.version>-->
     <ph-javacc-maven-plugin.version>2.8.0</ph-javacc-maven-plugin.version>
     <servlet-api.version>2.4</servlet-api.version>
     <sortpom-maven-plugin.version>2.4.0</sortpom-maven-plugin.version>
@@ -116,23 +116,23 @@
 
   <!-- Dependencies. -->
   <dependencies>
-    <dependency>
-      <groupId>com.sun</groupId>
-      <artifactId>rt-jdk1.5</artifactId>
-      <version>${rt-java5.version}</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>net.java.openjdk</groupId>
-      <artifactId>rt-java6</artifactId>
-      <version>${rt-java6.version}</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>net.java.openjdk</groupId>
-      <artifactId>ctsym-java7</artifactId>
-      <version>${rt-java7.version}</version>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>com.sun</groupId>-->
+<!--      <artifactId>rt-jdk1.5</artifactId>-->
+<!--      <version>${rt-java5.version}</version>-->
+<!--      <scope>provided</scope>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>net.java.openjdk</groupId>-->
+<!--      <artifactId>rt-java6</artifactId>-->
+<!--      <version>${rt-java6.version}</version>-->
+<!--      <scope>provided</scope>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>net.java.openjdk</groupId>-->
+<!--      <artifactId>ctsym-java7</artifactId>-->
+<!--      <version>${rt-java7.version}</version>-->
+<!--    </dependency>-->
     <dependency>
       <groupId>xerces</groupId>
       <artifactId>xercesImpl</artifactId>
@@ -150,28 +150,28 @@
       <version>${commons-dbcp2.version}</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>commons-dbcp</groupId>
-      <artifactId>commons-dbcp</artifactId>
-      <version>${commons-dbcp.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>pentaho</groupId>
-      <artifactId>mondrian</artifactId>
-      <version>${mondrian.version}</version>
-      <scope>test</scope>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>commons-dbcp</groupId>-->
+<!--      <artifactId>commons-dbcp</artifactId>-->
+<!--      <version>${commons-dbcp.version}</version>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>pentaho</groupId>-->
+<!--      <artifactId>mondrian</artifactId>-->
+<!--      <version>${mondrian.version}</version>-->
+<!--      <scope>test</scope>-->
+<!--    </dependency>-->
     <dependency>
       <groupId>log4j</groupId>
       <artifactId>log4j</artifactId>
       <version>${log4j.version}</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>com.h2database</groupId>
-      <artifactId>h2</artifactId>
-      <version>${h2.version}</version>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>com.h2database</groupId>-->
+<!--      <artifactId>h2</artifactId>-->
+<!--      <version>${h2.version}</version>-->
+<!--    </dependency>-->
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
@@ -207,25 +207,25 @@
       <artifactId>servlet-api</artifactId>
       <version>${servlet-api.version}</version>
     </dependency>
-    <dependency>
-      <groupId>pentaho</groupId>
-      <artifactId>mondrian-data-foodmart</artifactId>
-      <version>${mondrian-data-foodmart.version}</version>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>pentaho</groupId>-->
+<!--      <artifactId>mondrian-data-foodmart</artifactId>-->
+<!--      <version>${mondrian-data-foodmart.version}</version>-->
+<!--    </dependency>-->
   </dependencies>
 
-  <repositories>
-    <repository>
-      <releases>
-        <enabled>true</enabled>
-        <updatePolicy>always</updatePolicy>
-        <checksumPolicy>warn</checksumPolicy>
-      </releases>
-      <id>pentaho</id>
-      <name>Pentaho</name>
-      <url>http://repo.pentaho.org/artifactory/repo</url>
-    </repository>
-  </repositories>
+<!--  <repositories>-->
+<!--    <repository>-->
+<!--      <releases>-->
+<!--        <enabled>true</enabled>-->
+<!--        <updatePolicy>always</updatePolicy>-->
+<!--        <checksumPolicy>warn</checksumPolicy>-->
+<!--      </releases>-->
+<!--      <id>pentaho</id>-->
+<!--      <name>Pentaho</name>-->
+<!--      <url>http://repo.pentaho.org/artifactory/repo</url>-->
+<!--    </repository>-->
+<!--  </repositories>-->
 
   <build>
     <sourceDirectory>src/</sourceDirectory>
@@ -379,63 +379,63 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <executions>
-          <execution>
-            <id>compile-jdk15</id>
-            <goals>
-              <goal>compile</goal>
-            </goals>
-            <configuration>
-              <excludes>
-                <exclude>org/olap4j/driver/xmla/FactoryJdbc4Impl.java</exclude>
-                <exclude>org/olap4j/driver/xmla/FactoryJdbc4Plus.java</exclude>
-                <exclude>org/olap4j/driver/xmla/FactoryJdbc41Impl.java</exclude>
-              </excludes>
-              <includes>
-                <include>org/olap4j/driver/xmla/FactoryJdbc3Impl.java</include>
-              </includes>
-              <compilerArguments>
-                <verbose />
-                <bootclasspath>${com.sun:rt-jdk1.5:jar}</bootclasspath>
-              </compilerArguments>
-            </configuration>
-          </execution>
-          <execution>
-            <id>compile-jdk16</id>
-            <goals>
-              <goal>compile</goal>
-            </goals>
-            <configuration>
-              <excludes>
-                <exclude>org/olap4j/driver/xmla/FactoryJdbc3Impl.java</exclude>
-              </excludes>
-              <includes>
-                <include>org/olap4j/driver/xmla/FactoryJdbc4Impl.java</include>
-                <include>org/olap4j/driver/xmla/FactoryJdbc4Plus.java</include>
-                <include>org/olap4j/driver/xmla/FactoryJdbc41Impl.java</include>
-              </includes>
-              <compilerArguments>
-                <verbose />
-                <bootclasspath>${net.java.openjdk:rt-java6:jar}</bootclasspath>
-              </compilerArguments>
-            </configuration>
-          </execution>
-          <execution>
-            <id>compile-jdk17</id>
-            <goals>
-              <goal>compile</goal>
-            </goals>
-            <configuration>
-              <includes>
-                <include>org/olap4j/driver/xmla/FactoryJdbc4Impl.java</include>
-                <include>org/olap4j/driver/xmla/FactoryJdbc4Plus.java</include>
-                <include>org/olap4j/driver/xmla/FactoryJdbc41Impl.java</include>
-              </includes>
-              <compilerArguments>
-                <verbose />
-                <bootclasspath>${net.java.openjdk:rt-java7:jar}</bootclasspath>
-              </compilerArguments>
-            </configuration>
-          </execution>
+<!--          <execution>-->
+<!--            <id>compile-jdk15</id>-->
+<!--            <goals>-->
+<!--              <goal>compile</goal>-->
+<!--            </goals>-->
+<!--            <configuration>-->
+<!--              <excludes>-->
+<!--                <exclude>org/olap4j/driver/xmla/FactoryJdbc4Impl.java</exclude>-->
+<!--                <exclude>org/olap4j/driver/xmla/FactoryJdbc4Plus.java</exclude>-->
+<!--                <exclude>org/olap4j/driver/xmla/FactoryJdbc41Impl.java</exclude>-->
+<!--              </excludes>-->
+<!--              <includes>-->
+<!--                <include>org/olap4j/driver/xmla/FactoryJdbc3Impl.java</include>-->
+<!--              </includes>-->
+<!--              <compilerArguments>-->
+<!--                <verbose />-->
+<!--                <bootclasspath>${com.sun:rt-jdk1.5:jar}</bootclasspath>-->
+<!--              </compilerArguments>-->
+<!--            </configuration>-->
+<!--          </execution>-->
+<!--          <execution>-->
+<!--            <id>compile-jdk16</id>-->
+<!--            <goals>-->
+<!--              <goal>compile</goal>-->
+<!--            </goals>-->
+<!--            <configuration>-->
+<!--              <excludes>-->
+<!--                <exclude>org/olap4j/driver/xmla/FactoryJdbc3Impl.java</exclude>-->
+<!--              </excludes>-->
+<!--              <includes>-->
+<!--                <include>org/olap4j/driver/xmla/FactoryJdbc4Impl.java</include>-->
+<!--                <include>org/olap4j/driver/xmla/FactoryJdbc4Plus.java</include>-->
+<!--                <include>org/olap4j/driver/xmla/FactoryJdbc41Impl.java</include>-->
+<!--              </includes>-->
+<!--              <compilerArguments>-->
+<!--                <verbose />-->
+<!--                <bootclasspath>${net.java.openjdk:rt-java6:jar}</bootclasspath>-->
+<!--              </compilerArguments>-->
+<!--            </configuration>-->
+<!--          </execution>-->
+<!--          <execution>-->
+<!--            <id>compile-jdk17</id>-->
+<!--            <goals>-->
+<!--              <goal>compile</goal>-->
+<!--            </goals>-->
+<!--            <configuration>-->
+<!--              <includes>-->
+<!--                <include>org/olap4j/driver/xmla/FactoryJdbc4Impl.java</include>-->
+<!--                <include>org/olap4j/driver/xmla/FactoryJdbc4Plus.java</include>-->
+<!--                <include>org/olap4j/driver/xmla/FactoryJdbc41Impl.java</include>-->
+<!--              </includes>-->
+<!--              <compilerArguments>-->
+<!--                <verbose />-->
+<!--                <bootclasspath>${net.java.openjdk:rt-java7:jar}</bootclasspath>-->
+<!--              </compilerArguments>-->
+<!--            </configuration>-->
+<!--          </execution>-->
         </executions>
         <configuration>
           <source>1.5</source>
