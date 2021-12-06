@@ -313,7 +313,13 @@ abstract class XmlaOlap4jUtil {
     }
 
     static Double doubleElement(Element row, String name) {
-        return Double.valueOf(stringElement(row, name));
+        final String value = stringElement(row, name);
+        switch (value.toUpperCase()) {
+            case "INF": return Double.POSITIVE_INFINITY;
+            case "-INF": return Double.NEGATIVE_INFINITY;
+            case "NAN": return Double.NaN;
+            default: return Double.valueOf(stringElement(row, name));
+        }
     }
 
     static BigDecimal bigDecimalElement(Element row, String name) {
