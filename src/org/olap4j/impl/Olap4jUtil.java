@@ -48,15 +48,7 @@ public class Olap4jUtil {
     public static final boolean PreJdk15 =
         System.getProperty("java.version").startsWith("1.4");
 
-    /**
-     * Whether the code base has re-engineered using retroweaver.
-     * If this is the case, some functionality is not available.
-     */
-    public static final boolean Retrowoven =
-        DummyEnum.class.getSuperclass().getName().equals(
-            "com.rc.retroweaver.runtime.Enum_");
-
-    private static final Olap4jUtilCompatible compatible;
+    private static final Olap4jUtilCompatible compatible = new Olap4jUtilCompatibleJdk15();;
 
     private static final NamedList<?> EMPTY_NAMED_LIST =
         new EmptyNamedList();
@@ -66,27 +58,6 @@ public class Olap4jUtil {
 
     private static final Pattern CELL_VALUE_REGEX2 =
         Pattern.compile("\\s*([a-zA-Z][\\w\\.]*)\\s*=\\s*([^\\s]*)");
-
-    static {
-        String className;
-        if (PreJdk15 || Retrowoven) {
-            className = "org.olap4j.impl.Olap4jUtilCompatibleJdk14";
-        } else {
-            className = "org.olap4j.impl.Olap4jUtilCompatibleJdk15";
-        }
-        try {
-            //noinspection unchecked
-            Class<Olap4jUtilCompatible> clazz =
-                (Class<Olap4jUtilCompatible>) Class.forName(className);
-            compatible = clazz.newInstance();
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException("Could not load '" + className + "'", e);
-        } catch (InstantiationException e) {
-            throw new RuntimeException("Could not load '" + className + "'", e);
-        } catch (IllegalAccessException e) {
-            throw new RuntimeException("Could not load '" + className + "'", e);
-        }
-    }
 
     @SuppressWarnings({"UnusedDeclaration"})
     public static void discard(boolean b) {

@@ -444,6 +444,7 @@
           <includes>
             <include>org/olap4j/driver/xmla/FactoryJdbc4Plus.java</include>
             <include>org/olap4j/driver/xmla/FactoryJdbc41Impl.java</include>
+            <include>org/olap4j/impl/Olap4jUtilCompatibleJdk15</include>
           </includes>
           <excludes>
             <exclude>org/olap4j/driver/xmla/FactoryJdbc4Impl.java</exclude>
