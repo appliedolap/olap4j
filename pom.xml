@@ -108,6 +108,7 @@
 <!--    <rt-java5.version>1.5.0_22</rt-java5.version>-->
 <!--    <rt-java6.version>1.6.0_24</rt-java6.version>-->
 <!--    <rt-java7.version>1.7.0_15</rt-java7.version>-->
+    <rt-java8.version>1.8.0_222</rt-java8.version>
     <ph-javacc-maven-plugin.version>2.8.0</ph-javacc-maven-plugin.version>
     <servlet-api.version>2.4</servlet-api.version>
     <sortpom-maven-plugin.version>2.4.0</sortpom-maven-plugin.version>
@@ -420,7 +421,7 @@
 <!--            </configuration>-->
 <!--          </execution>-->
 <!--          <execution>-->
-<!--            <id>compile-jdk17</id>-->
+<!--            <id>compile-jdk18</id>-->
 <!--            <goals>-->
 <!--              <goal>compile</goal>-->
 <!--            </goals>-->
@@ -432,18 +433,20 @@
 <!--              </includes>-->
 <!--              <compilerArguments>-->
 <!--                <verbose />-->
-<!--                <bootclasspath>${net.java.openjdk:rt-java7:jar}</bootclasspath>-->
+<!--                <bootclasspath>${net.java.openjdk:rt-java8:jar}</bootclasspath>-->
 <!--              </compilerArguments>-->
 <!--            </configuration>-->
 <!--          </execution>-->
         </executions>
         <configuration>
-          <source>1.5</source>
-          <target>1.5</target>
+          <source>1.8</source>
+          <target>1.8</target>
+          <includes>
+            <include>org/olap4j/driver/xmla/FactoryJdbc4Plus.java</include>
+            <include>org/olap4j/driver/xmla/FactoryJdbc41Impl.java</include>
+          </includes>
           <excludes>
             <exclude>org/olap4j/driver/xmla/FactoryJdbc4Impl.java</exclude>
-            <exclude>org/olap4j/driver/xmla/FactoryJdbc4Plus.java</exclude>
-            <exclude>org/olap4j/driver/xmla/FactoryJdbc41Impl.java</exclude>
             <exclude>org/olap4j/driver/xmla/FactoryJdbc3Impl.java</exclude>
           </excludes>
         </configuration>
